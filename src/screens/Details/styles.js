@@ -6,23 +6,27 @@ const styles= StyleSheet.create({
     viewContainer:{
         flex:1,
 
-        backgroundColor: '#141a29',   
+        backgroundColor: '#141a29', 
+        padding:20  
     },
-    imageBanner:{
-        width:'100%',
-        height:400,
-        borderBottomLeftRadius: 70,
-        borderBottomRightRadius:70,
-        borderTopLeftRadius:12,
-        borderTopRightRadius:12,
-        
-        
+    imageBanner: {
+        width: '100%',
+        height: 400,
+        borderRadius: 20,
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
     },
     textBanner:{
         fontSize:30,
         color:"white",
         marginTop: 15,
-        marginLeft:-180,
+        
         fontWeight:'Bold',
         
     },
