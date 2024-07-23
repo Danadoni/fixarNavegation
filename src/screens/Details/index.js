@@ -5,6 +5,10 @@ import styles from './styles';
 import { AntDesign } from '@expo/vector-icons';
 import Stars from 'react-native-stars';
 import { Ionicons } from '@expo/vector-icons';
+
+
+// instalar a biblioteca das starts : npm install react-native-stars --save
+
 export default function Details(){
  const route = useRoute();
  const navigation = useNavigation();
@@ -15,14 +19,14 @@ export default function Details(){
           
 
          
-          <Image resizeMode='stretch' style={styles.imageBanner} source = {{ uri: `https://image.tmdb.org/t/p/original/${route.params.imagem}`}} />
+          <Image resizeMode='stretch' style={styles.imageBanner} source ={require(`../../Img/${route.params.imagem}`)} />
           <TouchableOpacity style ={styles.backButton} onPress={navigation.goBack}> 
           <AntDesign  name="leftcircle" size={35} color="white" /> 
           </TouchableOpacity>
           <View style={{marginTop:350}}>
           <Stars
             disabled = {true}
-            default = {route.params.nota}
+            default = {route.params?.nota}
             count = {10}
             half = {true}
             starSize ={20}
@@ -32,7 +36,7 @@ export default function Details(){
 
             </Stars>
             </View>
-          <Text> {route.params.titulo}</Text>
+          <Text style ={styles.textBanner}> {route.params?.titulo}</Text>
             </View> 
     
         )
