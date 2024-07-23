@@ -1,7 +1,7 @@
 
 import { StyleSheet, Text, View ,FlatList} from 'react-native';
 import BannerMovies from '../../components/bannerFilmes';
-import CardMovies from '../../components/cardFilmes';
+import CardMovies from '../../components/cardMovies';
 import Header from '../../components/header';
 import SearchBar from '../../components/searchbar';
 import Filmes from '../../data/movies'
